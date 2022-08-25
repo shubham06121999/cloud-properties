@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:sqlserver://sp-database.database.windows.net:1433;database=covidtracker;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+    username: spartan
+    password: Password1
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        ddl-auto: none
+        format_sql: true
+        dialect: org.hibernate.dialect.SQLServer2012Dialect
+
+  flyway:
+    enabled: false
+    validate-on-migrate: false
+    baselineOnMigrate: true
+    outOfOrder: true
